@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ススー'サイト</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container flex between">
+            <div class="header_left">
+                <h1 class="main_title">ススー</h1>
+            </div>
+            <div class="header_right">
+                <ul class="header_nav">
+                    <li class="header_nav_item">
+                        <a href="#top">トップ</a>
+                    </li>
+                    <li class="header_nav_item">
+                        <a href="#profile">プロフィール</a>
+                    </li>
+                    <li class="header_nav_item">
+                        <a href="#skill">スキル</a>
+                    </li>
+                    <li class="header_nav_item">
+                        <a href="#contact">お問い合わせ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="top">
+            <div class="container flex">
+                <div class="top_img">
+                    <img src="./img/top.png" alt="">
+                </div>
+                <div class="top_text">
+                    <h2>クラウドの無駄よ、<br>さようなら</h2>
+                </div>
+            </div>
+        </section>
+        <section id="profile">
+            <div class="container">
+                <h2 class="section_title">プロフィール</h2>
+                <div class="flex around">
+                    <div class="profile_img">
+                        <img src="./img/office_station.png" alt="ススー">
+                    </div>
+                    <div class="profile_text">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>名前：</td>
+                                    <td>ススー</td>
+                                </tr>
+                                <tr>
+                                    <td>種族：</td>
+                                    <td>ペンギン</td>
+                                </tr>
+                                <tr>
+                                    <td>所属：</td>
+                                    <td>オフィスステーション</td>
+                                </tr>
+                                <tr>
+                                    <td>好きな言葉：</td>
+                                    <td>クラウドの無駄よ、さようなら</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skill">
+            <div class="container">
+                <h2 class="section_title">スキル</h2>
+                <div class="card_area">
+                    <div class="card_item">
+                        <h3 class="card_title">HTML&CSS</h3>
+                        <img src="./img/html&css.png" alt="">
+                        <div class="card_text">
+                            <p>簡単な静的サイトを作成することができます。</p>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <h3 class="card_title">JavaScript</h3>
+                        <img src="./img/js.png" alt="">
+                        <div class="card_text">
+                            <p>動的サイトを作ることができます。</p>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <h3 class="card_title">PHP</h3>
+                        <img src="./img/php.svg" alt="">
+                        <div class="card_text">
+                            <p>サーバー上で動く言語でお問い合わせなどに用いられます。</p>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <h3 class="card_title">SQL</h3>
+                        <img src="./img/sql.jpeg" alt="">
+                        <div class="card_text">
+                            <p>お問い合わせ内容を保存するデータベースです。</p>
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <h3 class="card_title">Laravel</h3>
+                        <img src="./img/laravel.png" alt="">
+                        <div class="card_text">
+                            <p>PHPで最も人気なフレームワークです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2 class="section_title">お問い合わせ</h2>
+                <div class="form_area">
+                    <form action="">
+                        <span>・お名前</span><br>
+                        <input type="text" name="" id="" placeholder="ススー"><br>
+                        <span>・メールアドレス</span><br>
+                        <input type="text" name="" id="" placeholder="sample@gmail.com"><br>
+                        <span>・電話番号</span><br>
+                        <input type="text" name="" id="" placeholder="080-1111-2222"><br>
+                        <span>・お問い合わせ内容</span><br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                        <input type="submit" value="送信する">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <h3 class="footer_title">ススー'サイト</h3>
+            <div class="flex around">
+                <div class="footer_bottom">
+                    <ul class="footer_nav">
+                        <li class="footer_nav_item">
+                            <a href="#top">トップ</a>
+                        </li>
+                        <li class="footer_nav_item">
+                            <a href="#profile">プロフィール</a>
+                        </li>
+                        <li class="footer_nav_item">
+                            <a href="#skill">スキル</a>
+                        </li>
+                        <li class="footer_nav_item">
+                            <a href="#contact">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_img">
+                    <a href="https://www.officestation.jp/" target="_blank">
+                        <img src="./img/office.png" alt="オフィスステーション">
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2021 ススー</p>
+        </div>
+    </footer>
+</body>
+
+</html>

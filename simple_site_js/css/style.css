@@ -217,7 +217,7 @@ textarea {
     margin-bottom: 20px;
 }
 
-input[type="submit"] {
+#submit_btn {
     border: #3e4f59 solid 5px;
     border-radius: 999px;
     padding: 10px 20px;
@@ -227,7 +227,7 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-input[type="submit"]:hover {
+#submit_btn:hover {
     opacity: .8;
 }
 
@@ -264,3 +264,30 @@ footer {
 
 
 /*   フッター終わり   */
+
+
+/*   ここからJS用css   */
+
+.contact_btn {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    border-radius: 99px;
+    background-color: #72cccd;
+    font-weight: bold;
+}
+
+.contact_btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.display_none {
+    display: none;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+    font-size: 21px;
+}

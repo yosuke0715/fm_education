@@ -122,17 +122,22 @@
         <section id="contact">
             <div class="container">
                 <h2 class="section_title">お問い合わせ</h2>
-                <div class="form_area">
-                    <form action="">
+                <input class="contact_btn" id="contact_btn" type="button" value="お問い合わせをする">
+                <div id="form_area" class="form_area display_none">
+                    <form action="" id="form" name="form">
                         <span>・お名前</span><br>
-                        <input type="text" name="" id="" placeholder="ススー"><br>
+                        <p id="name_error" class="display_none red">名前は必須です。</p>
+                        <input type="text" name="name" id="name" placeholder="ススー"><br>
                         <span>・メールアドレス</span><br>
-                        <input type="text" name="" id="" placeholder="sample@gmail.com"><br>
+                        <p id="mail_error" class="display_none red">メールアドレスは必須です。</p>
+                        <input type="text" name="mail" id="mail" placeholder="sample@gmail.com"><br>
                         <span>・電話番号</span><br>
-                        <input type="text" name="" id="" placeholder="080-1111-2222"><br>
+                        <p id="tel_error" class="display_none red">電話番号は必須です。</p>
+                        <input type="text" name="tel" id="tel" placeholder="080-1111-2222"><br>
                         <span>・お問い合わせ内容</span><br>
-                        <textarea name="" id="" cols="30" rows="10"></textarea><br>
-                        <input type="submit" value="送信する">
+                        <p id="content_error" class="display_none red">お問い合わせ内容は必須です。</p>
+                        <textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+                        <button id="submit_btn">送信する</button>
                     </form>
                 </div>
             </div>
@@ -158,15 +163,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer_img">
-                    <a href="https://www.officestation.jp/" target="_blank">
-                        <img src="./img/office.png" alt="オフィスステーション">
-                    </a>
+                <div id="footer_img" class="footer_img">
+                    <img src="./img/office.png" alt="オフィスステーション">
                 </div>
             </div>
             <p class="copyright">&copy; 2021 ススー</p>
         </div>
     </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

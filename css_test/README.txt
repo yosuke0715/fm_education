@@ -13,4 +13,4 @@
 
 questionファイルが問題が入っているファイル
 answerファイルが答えが入っているファイル
-complate_photoファイルが完成形の写真が入ったファイル
+completed_photoファイルが完成形の写真が入ったファイル

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript６</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript【配列祭り】</h1>
+    </header>
+    <div class="test_area" style="text-align: center;">
+        <p class="ly_module_text">①の結果</p>
+        <p id="output1" class="ly_module_text"></p>
+        <p class="ly_module_text">②の結果</p>
+        <p id="output2" class="ly_module_text">console.logに表示</p>
+        <p class="ly_module_text">③の結果</p>
+        <p id="output3" class="ly_module_text"></p>
+        <p class="ly_module_text">④の結果</p>
+        <ul>
+            <li id="loop0"></li>
+            <li id="loop1"></li>
+            <li id="loop2"></li>
+            <li id="loop3"></li>
+            <li id="loop4"></li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        //配列に慣れる
+        // ここから処理をかく
+        //①配列からHTMLを取り出す
+        let array1 = [
+            "HTML", "CSS", "JavaScript"
+        ];
+        let answer1 = array1[0];
+        $("#output1").html(answer1);
+        //②配列から値を取り出しconsole上に表示させる
+        var array2 = ['book1', 'book2', 'book3', 'book4', 'book5'];
+
+        $.each(array2, function(index, value) {
+            let answer2 = index + ":" + value;
+            console.log(answer2);
+        });
+        //③配列からCSSを取り出してください
+        let array3 = [
+            ["HTML", "CSS"], "JavaScript"
+        ];
+        let answer3 = array3[0][1];
+        $("#output3").html(answer3);
+        //④配列をループで表示させる[HTML上に表示させる]
+        var array4 = [{
+            name: 'book1',
+            price: 10000,
+            theme: 'programming'
+        }, {
+            name: 'book2',
+            price: 5000,
+            theme: 'art'
+        }, {
+            name: 'book3',
+            price: 7500,
+            theme: 'science'
+        }, {
+            name: 'book4',
+            price: 12000,
+            theme: 'mathmatical'
+        }, {
+            name: 'book5',
+            price: 3000,
+            theme: 'language'
+        }];
+
+        $.each(array4,
+            function(index, val) {
+                $("#loop" + [index]).html('名称：' + val.name + ' 値段：' + val.price + ' ジャンル：' + val.theme);
+            }
+        );
+        //ここまで
+    </script>
+</body>
+
+</html>

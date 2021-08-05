@@ -1,0 +1,59 @@
+.calc_area {
+    width: 400px;
+    margin: 50px auto 0;
+    background-color: #000;
+}
+
+.num_area {
+    min-height: 200px;
+    position: relative;
+}
+
+.btn_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+input[type="text"] {
+    width: 99%;
+    border: none;
+    height: 80px;
+    position: absolute;
+    bottom: 10px;
+    background-color: #000;
+    color: #fff;
+    text-align: right;
+    font-size: 70px;
+}
+
+input[type="button"] {
+    width: 21%;
+    border-radius: 999px;
+    height: 85px;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+input[type="button"]:hover {
+    opacity: .8;
+}
+
+.another {
+    background-color: #a5a5a5;
+    color: #000 !important;
+}
+
+.cal {
+    background-color: #f1a33c;
+}
+
+.num {
+    background-color: #333;
+}
+
+.col-2 {
+    width: 45% !important;
+}

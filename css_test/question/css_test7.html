@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSテスト7</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .card_area {
+            width: 90%;
+            margin: auto;
+        }
+        
+        .card_item {
+            background-color: #eee;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+        
+        .card_title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 21px;
+        }
+        .card_area::after {
+            content: "";
+            display: block;
+            width: 30%;
+        }
+        .card_area {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .card_item {
+            width: 30%;
+        }
+        
+        /*
+        今回の課題はレスポンシブ対応を行っていく。
+        携帯で見た時とPCで見た時のレイアウトを変えるのが目的である。
+        実際はiPadなどいろんな解像度であるが今回はiPhoneXの横幅である375pxだけで
+        レスポンシブ対応を行ってみる。
+        */
+        /* ここから処理を書く and 変更する */
+        
+        
+
+        /*ここまで*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSSテスト7【レスポンシブ対応】</h1>
+    </header>
+    <div class="test_area">
+        <p class="ly_module_text">横幅375px以下なら縦並びにする</p>
+        <div class="card_area">
+            <div class="card_item">
+                <h3 class="card_title">サンプル１</h3>
+                <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+            </div>
+            <div class="card_item">
+                <h3 class="card_title">サンプル２</h3>
+                <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+            </div>
+            <div class="card_item">
+                <h3 class="card_title">サンプル３</h3>
+                <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+            </div>
+            <div class="card_item">
+                <h3 class="card_title">サンプル４</h3>
+                <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+            </div>
+            <div class="card_item">
+                <h3 class="card_title">サンプル５</h3>
+                <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -21,7 +21,7 @@ $("#submit_btn").click(function(e) {
     const content = $("#content");
 
     //正規表現（あえてアラートで）
-    const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
+    const reg = /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/;
 
     const tel_without_hyphen = tel.val().replace(/[━.*‐.*―.*－.*\-.*ー.*\-]/gi, '');
 

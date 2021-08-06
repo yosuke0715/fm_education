@@ -23,7 +23,7 @@ document.getElementById("submit_btn").onclick = function(e) {
     const content = document.getElementById("content");
 
     //正規表現（あえてアラートで）
-    const reg = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/;
+    const reg = /^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/;
 
     const tel_without_hyphen = tel.value.replace(/[━.*‐.*―.*－.*\-.*ー.*\-]/gi, '');
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,37 +8,31 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
-
 <body>
     <header>
-        <h1>PHP4【配列の結合】</h1>
+        <h1>PHP4【配列の中身を表示させる】</h1>
     </header>
     <div class="test_area">
-        <p class="ly_module_text">目標物</p>
-        <p class="ly_module_text"><img src="./img/array.png" alt="配列"></p>
+        <p class="ly_module_text">例)array(5) { ["りんご"]=> int(100) ["ぶどう"]=> int(500) ["メロン"]=> int(3000) ["バナナ"]=> int(200) ["レモン"]=> int(120) }</p>
         <p class="ly_module_text">この下に表示させる</p>
-        <p style="margin-left:40%;">
+        <p class="ly_module_text">
         <?php
         // 配列の中身を確認します。
         // 実務では配列の中に何が入っているかどうか確認するときによく使います。
-        $customer_id_array = array(1,2,3);
-        $customer_name_array = array("松本", "村田", "熊田");
-        $customer_gender_array = array("男性", "女性", "その他");
-        $customer_blood_type_array = array("A型", "O型", "AB型");
+        $array = array(
+            'りんご' => 100,
+            'ぶどう' => 500,
+            'メロン' => 3000,
+            'バナナ' => 200,
+            'レモン' => 120
+        );
         // ここから処理を追加
-        // $customer_array = ;
+
 
         
 
-        //ここまで処理を書く
-        ob_start();
-        var_dump($customer_array);
-        $content=ob_get_contents();
-        ob_end_clean();
-        print nl2br(htmlspecialchars($content));
         ?>
         </p>
     </div>
 </body>
-
 </html>

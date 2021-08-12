@@ -3,25 +3,36 @@
     function check($post){
         return htmlspecialchars($post, ENT_QUOTES, 'UTF-8');
     }
+    function emptyPostData(){
+        $NAME = "";
+        $MAIL = "";
+        $TEL = "";
+        $CONTENT = "";
+    }
     if (isset($_POST)) {
         // 氏名
         if (empty($_POST['name'])) {
             $errors[] = '氏名は必須項目です。';
+            emptyPostData()
         }
         // メール
         if (empty($_POST['mail'])) {
             $errors[] = 'Eメールは必須項目です。';
+            emptyPostData()
         } elseif (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
             $errors[] = '正しいEメールアドレスを指定してください。';
+            emptyPostData()
         }
         // 電話番号
         if (empty($_POST['tel'])) {
             $errors[] = '電話番号を入力してください。';
+            emptyPostData()
         }
 
         // お問い合わせ内容
         if (empty($_POST['content'])) {
             $errors[] = 'お問い合わせ内容は必須項目です。';
+            emptyPostData()
         } 
         if (empty($errors)){
             $NAME = check($_POST["name"]);

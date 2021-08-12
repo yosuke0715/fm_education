@@ -12,6 +12,7 @@ simple_site_jquery
 ・PHP用
 php_memo
 php_test
+simple_site_php
 
 ・Laravel用
 laraevl_memo

@@ -5,7 +5,6 @@ simple_site
 ・JS用
 simple_site_js
 js_test
-calculator
 
 ・jQuery用
 simple_site_jquery

@@ -73,7 +73,7 @@
             $(".contents:not(:first-of-type)").css("display", "none");
 
             $('.tab_menu_item').click(function() {
-                var index = $('.tab_menu_item').index(this);
+                let index = $('.tab_menu_item').index(this);
                 $('.tab_menu_item').removeClass('current');
                 $(this).addClass('current');
                 $('.contents').hide().eq(index).show();

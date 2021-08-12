@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript7</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript【ちょいむずfor文】</h1>
+    </header>
+    <div class="test_area" style="text-align: center;">
+        <div class="flex">
+            <div class="left">
+                <p class="ly_module_text">目標物</p>
+                <p id="content" style="text-align: center; font-size: 30px;"></p>
+            </div>
+            <div class="right">
+                <p class="ly_module_text">このしたに作る</p>
+                <p id="targetId" style="text-align: center; font-size: 30px;"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // ここから処理をかく
+        for (let i = 1; i < 11; i++) {
+            for (j = 1; j < i; j++) {
+
+                $("#targetId").append("*");
+            }
+            $("#targetId").append("<br>");
+
+        }
+        //ここまで
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript8</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .tab_menu {
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+        }
+        
+        .tab_menu_item {
+            padding: 20px 25px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+        }
+        
+        .current {
+            background-color: #72cccd;
+        }
+        
+        .contents {
+            background-color: #72cccd;
+            width: 600px;
+            margin: auto;
+            height: 300px;
+            line-height: 300px;
+            font-weight: bold;
+            font-size: 32px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript【タブを作る】</h1>
+    </header>
+    <div class="test_area" style="text-align: center;">
+        <ul class="tab_menu">
+            <li class="tab_menu_item current">メニュー1</li>
+            <li class="tab_menu_item">メニュー2</li>
+            <li class="tab_menu_item">メニュー3</li>
+            <li class="tab_menu_item">メニュー4</li>
+        </ul>
+        <div>
+            <div class="contents">
+                コンテンツ１
+            </div>
+            <div class="contents">
+                コンテンツ２
+            </div>
+            <div class="contents">
+                コンテンツ３
+            </div>
+            <div class="contents">
+                コンテンツ４
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        //タブ機能を作成する
+        // ここから処理をかく
+        $(function() {
+            $(".contents:not(:first-of-type)").css("display", "none");
+
+            $('.tab_menu_item').click(function() {
+                let index = $('.tab_menu_item').index(this);
+                $('.tab_menu_item').removeClass('current');
+                $(this).addClass('current');
+                $('.contents').hide().eq(index).show();
+            });
+        });
+        //ここまで
+    </script>
+</body>
+
+</html>

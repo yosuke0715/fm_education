@@ -1,0 +1,106 @@
+@charset "utf-8";
+body {
+    background-color: #ecd6a5;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+header {
+    background-color: #ecd6a5;
+    display: block;
+    height: 80px;
+}
+
+h1 {
+    line-height: 80px;
+    font-weight: bold;
+    font-size: 26px;
+    margin-left: 50px;
+}
+
+.add_area {
+    background-color: #eee;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    box-shadow: 2px 2px 4px;
+}
+
+.memo_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+input[type=text] {
+    border: #000 solid 3px;
+    width: 300px;
+    display: block;
+    border-radius: 10px;
+    height: 50px;
+    margin: auto;
+}
+
+.submit_btn {
+    padding: 10px 20px;
+    border: #111 solid 5px;
+    background-color: #f3d24f;
+    border-radius: 999px;
+    margin: 30px auto;
+    display: block;
+    font-weight: bold;
+}
+
+.edit_btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: #111 solid 5px;
+    background-color: #a5d3ad;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.del_btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #f25e5d;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    text-align: center;
+}
+
+.del_form:hover {
+    opacity: .8;
+}
+
+.card_item {
+    position: relative;
+    background-color: #f3d24f;
+    width: 600px;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px;
+}
+
+.card_item p {
+    width: 80%;
+}
+
+.card_item form {
+    display: inline-block;
+}

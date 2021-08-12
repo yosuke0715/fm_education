@@ -8,6 +8,14 @@
     <title>JavaScript10</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <style>
+        .calc_btn {
+            margin: 0 !important;
+            border: 1px solid #000 !important;
+            border-radius: 10px !important;
+            background-color: #eee !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,14 +23,84 @@
         <h1>JavaScript【電卓】</h1>
     </header>
     <div class="test_area" style="text-align: center;">
-        <img src="img/calc.png" style="width: 600px;">
-        <p class="ly_module_text">上写真のような電卓を作成する</p>
+        <input type="text" name="getNumber1" id="getNumber1">
+        <input type="text" name="getNumber2" id="getNumber2">
+        <input type="button" value="+" class="calc_btn" id="addition_btn">
+        <input type="button" value="-" class="calc_btn" id="subtraction_btn">
+        <input type="button" value="×" class="calc_btn" id="multiplication_btn">
+        <input type="button" value="÷" class="calc_btn" id="division_btn">
+        <p id="show" class="ly_module_text"></p>
+        <p class="ly_module_text" style="margin-top: 30px;">上写真のような電卓を作成する</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         //電卓を作成する
         // ここから処理をかく
+        // js_test10α.htmlに別解あり
+        $("#addition_btn").click(function() {
+            const getNumber1 = $("#getNumber1").val();
+            const getNumber2 = $("#getNumber2").val();
+            const number1 = Number(getNumber1);
+            const number2 = Number(getNumber2);
+            addition(number1, number2);
+        })
 
+        $("#subtraction_btn").click(function() {
+            let getNumber1 = $("#getNumber1").val();
+            let getNumber2 = $("#getNumber2").val();
+            let number1 = Number(getNumber1);
+            let number2 = Number(getNumber2);
+            subtraction(number1, number2);
+        })
+
+        $("#multiplication_btn").click(function() {
+            let getNumber1 = $("#getNumber1").val();
+            let getNumber2 = $("#getNumber2").val();
+            let number1 = Number(getNumber1);
+            let number2 = Number(getNumber2);
+            multiplication(number1, number2);
+        })
+
+        $("#division_btn").click(function() {
+            let getNumber1 = $("#getNumber1").val();
+            let getNumber2 = $("#getNumber2").val();
+            let number1 = Number(getNumber1);
+            let number2 = Number(getNumber2);
+            division(number1, number2);
+        })
+
+        function addition(number1, number2) {
+            let result = number1 + number2;
+            showResult(result);
+        }
+
+        function subtraction(number1, number2) {
+            let result = number1 - number2;
+            showResult(result);
+        }
+
+        function multiplication(number1, number2) {
+            let result = number1 * number2;
+            showResult(result);
+        }
+
+        function division(number1, number2) {
+            if (number2 == 0) {
+                error();
+            } else {
+                let result = number1 / number2;
+                showResult(result);
+            }
+        }
+
+        function showResult(result) {
+            $("#show").text("計算結果は" + result + "です");
+        }
+
+        function error() {
+            $("#show").text("エラー");
+
+        }
         //ここまで
     </script>
 </body>

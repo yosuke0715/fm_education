@@ -1,18 +1,18 @@
 ・　HTML&CSS用
-css_test
+test_css
 simple_site
 
 ・JS用
 simple_site_js
-js_test
+test_js
 
 ・jQuery用
 simple_site_jquery
 
 ・PHP用
-php_memo
-php_test
+test_php
 simple_site_php
+memo_php
 
 ・Laravel用
-laraevl_memo
+memo_laraevl

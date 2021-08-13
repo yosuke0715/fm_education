@@ -12,15 +12,15 @@
     if (isset($_POST)) {
         // 氏名
         if (empty($_POST['name'])) {
-            $errors[] = '氏名は必須項目です。';
+            $errors[] = '名前を入力してください。';
             emptyPostData()
         }
         // メール
         if (empty($_POST['mail'])) {
-            $errors[] = 'Eメールは必須項目です。';
+            $errors[] = 'メールアドレスを入力してください。';
             emptyPostData()
         } elseif (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-            $errors[] = '正しいEメールアドレスを指定してください。';
+            $errors[] = '正しいEメールアドレスを入力してください。';
             emptyPostData()
         }
         // 電話番号
@@ -31,7 +31,7 @@
 
         // お問い合わせ内容
         if (empty($_POST['content'])) {
-            $errors[] = 'お問い合わせ内容は必須項目です。';
+            $errors[] = 'お問い合わせ内容を入力してください。';
             emptyPostData()
         } 
         if (empty($errors)){

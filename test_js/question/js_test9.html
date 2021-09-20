@@ -8,19 +8,101 @@
     <title>JavaScript9</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <style>
+        .container {
+            margin: 30px auto;
+            padding: 30px 0;
+            width: 300px;
+            text-align: center;
+            background-color: #eee;
+            border-radius: 30px;
+            box-shadow: 2px 2px 4px gray;
+        }
+        
+        input {
+            width: 200px;
+            height: 50px;
+            font-size: 40px;
+            text-align: center;
+            border: none;
+        }
+        
+        .btn_area {
+            width: 200px;
+            display: flex;
+            margin: auto;
+        }
+        
+        .btn {
+            width: 49%;
+            padding: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 25px 0;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 2px 2px 4px gray
+        }
+        
+        .puls {
+            background-color: #d62839;
+            margin-left: 3px;
+        }
+        
+        .minus {
+            background-color: #498ee0;
+        }
+        
+        .reset {
+            border: none;
+            font-weight: bold;
+            font-size: 30px;
+            background-color: #fbb02d;
+            padding: 10px 40px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px gray
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>JavaScript【カウントダウンタイマー】</h1>
+        <h1>JavaScript【カウントタイマー】</h1>
     </header>
-    <div class="test_area">
-        <p style="text-align: center;"><span id="timer"></span></p>
+    <div class="container">
+        <input id="counterOutput" value="0" disabled>
+        <div class="btn_area">
+            <button id="minusButton" class="btn minus">ー</button>
+            <button id="plusButton" class="btn puls">+</button>
+        </div>
+        <button id="resetButton" class="reset">Reset</button>
     </div>
 
     <script>
-        //ここから処理をかく
+        let counterOutput = document.getElementById("counterOutput");
 
+        // 加算機能
+        let plusButton = document.getElementById("plusButton");
+        let onClickPlusButton = () => {
+            counterOutput.value++;
+        };
+        plusButton.addEventListener("click", onClickPlusButton);
+
+        // 減算機能
+        let minusButton = document.getElementById("minusButton");
+        let onClickMinusButton = () => {
+            if (counterOutput.value >= 1) {
+                counterOutput.value--; // カウント数が1以上のときだけ減算する
+            }
+        };
+        minusButton.addEventListener("click", onClickMinusButton);
+
+        // リセット機能
+        let resetButton = document.getElementById("resetButton");
+        let onClickResetButton = () => {
+            counterOutput.value = 0;
+        };
+        resetButton.addEventListener("click", onClickResetButton);
     </script>
 </body>
 

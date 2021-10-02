@@ -20,8 +20,6 @@
         <p class="ly_module_text">この下に表示させる</p>
         <p style="margin-left:40%;">
         <?php
-        // 配列の中身を確認します。
-        // 実務では配列の中に何が入っているかどうか確認するときによく使います。
         $customer_id_array = array(1,2,3);
         $customer_name_array = array("松本", "村田", "熊田");
         $customer_gender_array = array("男性", "女性", "その他");

@@ -15,6 +15,10 @@
             border-radius: 10px !important;
             background-color: #eee !important;
         }
+        
+        .my-5 {
+            margin: 30px 0;
+        }
     </style>
 </head>
 
@@ -23,13 +27,13 @@
         <h1>JavaScript【電卓】</h1>
     </header>
     <div class="test_area" style="text-align: center;">
-        <input type="text" name="getNumber1" id="getNumber1">
-        <input type="text" name="getNumber2" id="getNumber2">
+        <input type="text" name="getLeftNumber" id="getLeftNumber">
+        <input type="text" name="getRightNumber" id="getRightNumber">
         <input type="button" value="+" class="calc_btn" id="addition_btn" onclick="calculator('+')">
         <input type="button" value="-" class="calc_btn" id="subtraction_btn" onclick="calculator('-')">
         <input type="button" value="×" class="calc_btn" id="multiplication_btn" onclick="calculator('×')">
         <input type="button" value="÷" class="calc_btn" id="division_btn" onclick="calculator('÷')">
-        <p id="show" class="ly_module_text"></p>
+        <p id="show" class="ly_module_text my-5"></p>
         <p class="ly_module_text" style="margin-top: 30px;">電卓を作成する</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -37,24 +41,22 @@
         //電卓を作成する
         // ここから処理をかく
         function calculator(parameter) {
-            const getNumber1 = $("#getNumber1").val();
-            const getNumber2 = $("#getNumber2").val();
-            const number1 = Number(getNumber1);
-            const number2 = Number(getNumber2);
+            const getLeftNumber = Number($("#getLeftNumber").val());
+            const getRightNumber = Number($("#getRightNumber").val());
             if (parameter == "+") {
-                let result = number1 + number2;
+                let result = getLeftNumber + getRightNumber;
                 showResult(result);
             } else if (parameter == "-") {
-                let result = number1 - number2;
+                let result = getLeftNumber - getRightNumber;
                 showResult(result);
             } else if (parameter == "×") {
-                let result = number1 * number2;
+                let result = getLeftNumber * getRightNumber;
                 showResult(result);
             } else if (parameter == "÷") {
-                if (number2 == 0) {
+                if (getRightNumber == 0) {
                     error();
                 } else {
-                    let result = number1 / number2;
+                    let result = getLeftNumber / getRightNumber;
                     showResult(result);
                 }
             }

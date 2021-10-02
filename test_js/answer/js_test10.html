@@ -23,8 +23,8 @@
         <h1>JavaScript【電卓】</h1>
     </header>
     <div class="test_area" style="text-align: center;">
-        <input type="text" name="getNumber1" id="getNumber1">
-        <input type="text" name="getNumber2" id="getNumber2">
+        <input type="text" name="getLeftNumber" id="getLeftNumber">
+        <input type="text" name="getRightNumber" id="getRightNumber">
         <input type="button" value="+" class="calc_btn" id="addition_btn">
         <input type="button" value="-" class="calc_btn" id="subtraction_btn">
         <input type="button" value="×" class="calc_btn" id="multiplication_btn">
@@ -38,57 +38,49 @@
         // ここから処理をかく
         // js_test10α.htmlに別解あり
         $("#addition_btn").click(function() {
-            const getNumber1 = $("#getNumber1").val();
-            const getNumber2 = $("#getNumber2").val();
-            const number1 = Number(getNumber1);
-            const number2 = Number(getNumber2);
-            addition(number1, number2);
+            const getLeftNumber = Number($("#getLeftNumber").val());
+            const getRightNumber = Number($("#getRightNumber").val());
+            addition(getLeftNumber, getRightNumber);
         })
 
         $("#subtraction_btn").click(function() {
-            let getNumber1 = $("#getNumber1").val();
-            let getNumber2 = $("#getNumber2").val();
-            let number1 = Number(getNumber1);
-            let number2 = Number(getNumber2);
-            subtraction(number1, number2);
+            const getLeftNumber = Number($("#getLeftNumber").val());
+            const getRightNumber = Number($("#getRightNumber").val());
+            subtraction(getLeftNumber, getRightNumber);
         })
 
         $("#multiplication_btn").click(function() {
-            let getNumber1 = $("#getNumber1").val();
-            let getNumber2 = $("#getNumber2").val();
-            let number1 = Number(getNumber1);
-            let number2 = Number(getNumber2);
-            multiplication(number1, number2);
+            const getLeftNumber = Number($("#getLeftNumber").val());
+            const getRightNumber = Number($("#getRightNumber").val());
+            multiplication(getLeftNumber, getRightNumber);
         })
 
         $("#division_btn").click(function() {
-            let getNumber1 = $("#getNumber1").val();
-            let getNumber2 = $("#getNumber2").val();
-            let number1 = Number(getNumber1);
-            let number2 = Number(getNumber2);
-            division(number1, number2);
+            const getLeftNumber = Number($("#getLeftNumber").val());
+            const getRightNumber = Number($("#getRightNumber").val());
+            division(getLeftNumber, getRightNumber);
         })
 
-        function addition(number1, number2) {
-            let result = number1 + number2;
+        function addition(getLeftNumber, getRightNumber) {
+            let result = getLeftNumber + getRightNumber;
             showResult(result);
         }
 
-        function subtraction(number1, number2) {
-            let result = number1 - number2;
+        function subtraction(getLeftNumber, getRightNumber) {
+            let result = getLeftNumber - getRightNumber;
             showResult(result);
         }
 
-        function multiplication(number1, number2) {
-            let result = number1 * number2;
+        function multiplication(getLeftNumber, getRightNumber) {
+            let result = getLeftNumber * getRightNumber;
             showResult(result);
         }
 
-        function division(number1, number2) {
-            if (number2 == 0) {
+        function division(getLeftNumber, getRightNumber) {
+            if (getRightNumber == 0) {
                 error();
             } else {
-                let result = number1 / number2;
+                let result = getLeftNumber / getRightNumber;
                 showResult(result);
             }
         }
